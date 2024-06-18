@@ -14,6 +14,7 @@ import fr.leroideskiwis.omegabot.command.goulag.bomb.AddTimeBomb;
 import fr.leroideskiwis.omegabot.command.goulag.bomb.GiveBomb;
 import fr.leroideskiwis.omegabot.command.goulag.bomb.LockBomb;
 import fr.leroideskiwis.omegabot.command.other.AboutCommand;
+import fr.leroideskiwis.omegabot.command.other.changelog.ChangelogCommand;
 import fr.leroideskiwis.omegabot.events.EventManager;
 import fr.leroideskiwis.omegabot.listeners.CommandListener;
 import fr.leroideskiwis.omegabot.listeners.MessageListener;
@@ -23,7 +24,7 @@ import net.dv8tion.jda.api.JDABuilder;
 
 public class Main {
 
-    public static String version = "1.4.3";
+    public static String version = "1.4.4";
     private CommandManager commandManager;
     private EventManager eventManager;
     private UserManager userManager;
@@ -46,6 +47,7 @@ public class Main {
                 new AnonymousCommand(),
                 new AboutCommand(),
                 new SlotMachineCommand(),
+                new ChangelogCommand(),
                 new ClassementCommand(userManager),
                 new SpecialChannelCommand(eventManager)
         );
